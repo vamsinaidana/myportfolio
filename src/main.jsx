@@ -15,6 +15,7 @@ import "./cssfile/testimonials.css";
 import "./cssfile/contact.css";
 import "./cssfile/footer.css";
 import "./app.css";
+import "./index.css";
 
 import App from './App'
  
