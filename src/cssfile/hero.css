@@ -1,0 +1,1670 @@
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 130px 0 90px;
+
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(59, 130, 246, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(20, 184, 166, 0.08),
+      transparent 25%
+    ),
+    #f8fafc;
+
+  color: #0f172a;
+}
+
+
+/* =====================================================
+   BACKGROUND GRID
+===================================================== */
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.35;
+
+  background-image:
+    linear-gradient(
+      rgba(15, 23, 42, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(15, 23, 42, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 60px 60px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 85%
+  );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   BACKGROUND GLOWS
+===================================================== */
+
+.hero-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(5px);
+
+  pointer-events: none;
+}
+
+.hero-glow-one {
+  width: 420px;
+  height: 420px;
+
+  top: 5%;
+  right: -130px;
+
+  background: rgba(59, 130, 246, 0.10);
+}
+
+.hero-glow-two {
+  width: 280px;
+  height: 280px;
+
+  bottom: -100px;
+  left: -80px;
+
+  background: rgba(20, 184, 166, 0.10);
+}
+
+.hero-glow-three {
+  width: 180px;
+  height: 180px;
+
+  top: 25%;
+  left: 42%;
+
+  background: rgba(139, 92, 246, 0.06);
+}
+
+
+/* =====================================================
+   HERO ROW
+===================================================== */
+
+.hero-row {
+  position: relative;
+
+  min-height: 650px;
+
+  z-index: 2;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+  max-width: 700px;
+
+  animation: heroContentReveal 1s ease both;
+}
+
+
+/* =====================================================
+   WELCOME
+===================================================== */
+
+.hero-welcome {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  color: #2563eb;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.welcome-line {
+  width: 32px;
+  height: 2px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #14b8a6
+  );
+}
+
+
+.welcome-icon {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 0.8rem;
+}
+
+
+/* =====================================================
+   HERO TITLE
+===================================================== */
+
+.hero-title {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+
+.hero-title-small {
+  margin-bottom: 8px;
+
+  color: #64748b;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+}
+
+
+/* =====================================================
+   NAME
+===================================================== */
+
+.hero-name {
+  display: inline-block;
+
+  width: fit-content;
+
+  margin-left: -4px;
+
+  font-size: clamp(
+    3.4rem,
+    6vw,
+    6.2rem
+  );
+
+  font-weight: 900;
+
+  letter-spacing: -0.065em;
+
+  line-height: 0.98;
+
+  color: #0f172a;
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  clip-path: inset(
+    0 100% 0 0
+  );
+
+  background: linear-gradient(
+    100deg,
+    #0f172a 0%,
+    #2563eb 48%,
+    #14b8a6 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+.hero-name.name-visible {
+  animation:
+    nameReveal 1.5s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    )
+    forwards;
+}
+
+
+/* =====================================================
+   ROLE
+===================================================== */
+
+.hero-role {
+  margin-top: 16px;
+
+  color: #334155;
+
+  font-size: clamp(
+    1.3rem,
+    2vw,
+    1.8rem
+  );
+
+  font-weight: 700;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.hero-description {
+  max-width: 600px;
+
+  margin: 27px 0 20px;
+
+  color: #64748b;
+
+  font-size: 1.02rem;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   FREELANCE BADGE
+===================================================== */
+
+.freelance-badge {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 8px 13px;
+
+  margin-bottom: 30px;
+
+  border: 1px solid rgba(
+    20,
+    184,
+    166,
+    0.20
+  );
+
+  border-radius: 50px;
+
+  background: rgba(
+    20,
+    184,
+    166,
+    0.07
+  );
+
+  color: #0f766e;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+
+.freelance-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #14b8a6;
+
+  box-shadow:
+    0 0 0 4px rgba(
+      20,
+      184,
+      166,
+      0.12
+    );
+
+  animation: pulseDot 1.8s infinite;
+}
+
+
+.freelance-badge i {
+  margin-left: 3px;
+
+  font-size: 0.7rem;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 38px;
+}
+
+
+.hero-primary-btn,
+.hero-secondary-btn {
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 20px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  font-size: 0.88rem;
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* Primary */
+
+.hero-primary-btn {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #14b8a6
+  );
+
+  box-shadow:
+    0 12px 28px rgba(
+      37,
+      99,
+      235,
+      0.20
+    );
+}
+
+
+.hero-primary-btn:hover {
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 17px 35px rgba(
+      37,
+      99,
+      235,
+      0.27
+    );
+}
+
+
+.hero-primary-btn i {
+  transition: transform 0.3s ease;
+}
+
+
+.hero-primary-btn:hover i {
+  transform: translate(3px, -3px);
+}
+
+
+/* Secondary */
+
+.hero-secondary-btn {
+  color: #334155;
+
+  border: 1px solid #dbe3ed;
+
+  background: #ffffff;
+}
+
+
+.hero-secondary-btn:hover {
+  color: #2563eb;
+
+  border-color: #bfdbfe;
+
+  background: #eff6ff;
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   SOCIALS
+===================================================== */
+
+.hero-social-area {
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+}
+
+
+.social-label {
+  color: #94a3b8;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+
+.hero-socials {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.hero-socials a {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  transition: all 0.3s ease;
+}
+
+
+.hero-socials a:hover {
+  color: #ffffff;
+
+  border-color: #2563eb;
+
+  background: #2563eb;
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 8px 18px rgba(
+      37,
+      99,
+      235,
+      0.20
+    );
+}
+
+
+/* =====================================================
+   IMAGE AREA
+===================================================== */
+
+.hero-image-area {
+  position: relative;
+
+  width: 100%;
+  height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =====================================================
+   IMAGE GLOW
+===================================================== */
+
+.hero-image-glow {
+  position: absolute;
+
+  width: 370px;
+  height: 370px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.25),
+    rgba(20, 184, 166, 0.20)
+  );
+
+  filter: blur(200px);
+
+  animation: imageGlow 5s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   IMAGE FRAME
+===================================================== */
+
+.hero-image-wrapper {
+  position: relative;
+
+  z-index: 3;
+}
+
+
+.hero-image-frame {
+  width: 360px;
+  height: 360px;
+
+  padding: 9px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #14b8a6,
+    #8b5cf6,
+    #2563eb
+  );
+
+  background-size: 300% 300%;
+
+  animation:
+    gradientRotate 7s ease infinite;
+
+  box-shadow:
+    0 30px 80px rgba(
+      15,
+      23,
+      42,
+      0.20
+    );
+}
+
+
+.hero-profile-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border: 7px solid #f8fafc;
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   DECORATIVE RINGS
+===================================================== */
+
+.hero-ring {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px dashed rgba(
+    59,
+    130,
+    246,
+    0.30
+  );
+}
+
+
+.hero-ring-one {
+  width: 440px;
+  height: 440px;
+
+  animation: ringRotate 18s linear infinite;
+}
+
+
+.hero-ring-two {
+  width: 500px;
+  height: 500px;
+
+  border-color: rgba(
+    20,
+    184,
+    166,
+    0.17
+  );
+
+  animation:
+    ringRotateReverse
+    25s
+    linear
+    infinite;
+}
+
+
+/* =====================================================
+   FLOATING FREELANCE CARD
+===================================================== */
+
+.floating-freelance-card {
+  position: absolute;
+
+  top: 85px;
+  right: -5px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 15px;
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.8
+  );
+
+  border-radius: 15px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.90
+  );
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 15px 35px rgba(
+      15,
+      23,
+      42,
+      0.10
+    );
+
+  animation:
+    floatingCard 4s ease-in-out infinite;
+}
+
+
+.floating-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+
+.floating-freelance-card > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.floating-small {
+  color: #94a3b8;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+
+.floating-freelance-card strong {
+  color: #0f172a;
+
+  font-size: 0.78rem;
+}
+
+
+.floating-status {
+  width: 8px;
+  height: 8px;
+
+  margin-left: 2px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 4px rgba(
+      34,
+      197,
+      94,
+      0.12
+    );
+}
+
+
+/* =====================================================
+   FLOATING PROJECT CARD
+===================================================== */
+
+.floating-project-card {
+  position: absolute;
+
+  bottom: 85px;
+  left: -15px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 15px;
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.8
+  );
+
+  border-radius: 15px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.90
+  );
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 15px 35px rgba(
+      15,
+      23,
+      42,
+      0.10
+    );
+
+  animation:
+    floatingCardReverse 4.5s
+    ease-in-out
+    infinite;
+}
+
+
+.project-floating-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #ecfdf5;
+
+  color: #0f766e;
+}
+
+
+.floating-project-card > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.floating-project-card strong {
+  color: #0f172a;
+
+  font-size: 0.78rem;
+}
+
+
+.floating-project-card span {
+  color: #94a3b8;
+
+  font-size: 0.65rem;
+}
+
+
+/* =====================================================
+   FLOATING TECH ICONS
+===================================================== */
+
+.floating-tech {
+  position: absolute;
+
+  z-index: 4;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  color: #2563eb;
+
+  box-shadow:
+    0 10px 25px rgba(
+      15,
+      23,
+      42,
+      0.08
+    );
+}
+
+
+.floating-react {
+  top: 160px;
+  left: 20px;
+
+  animation:
+    floatingSmall 3.5s ease-in-out infinite;
+}
+
+
+.floating-code {
+  right: 25px;
+  bottom: 170px;
+
+  color: #14b8a6;
+
+  animation:
+    floatingSmall 4s
+    ease-in-out
+    infinite
+    0.5s;
+}
+
+
+.floating-star {
+  top: 115px;
+  left: 90px;
+
+  color: #8b5cf6;
+
+  animation:
+    floatingSmall 4.2s
+    ease-in-out
+    infinite
+    0.8s;
+}
+
+
+/* =====================================================
+   SCROLL INDICATOR
+===================================================== */
+
+.hero-scroll {
+  position: absolute;
+
+  bottom: 25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #94a3b8;
+
+  text-decoration: none;
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+}
+
+
+.hero-scroll:hover {
+  color: #2563eb;
+}
+
+
+.hero-scroll i {
+  animation:
+    scrollArrow 1.5s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes heroContentReveal {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes nameReveal {
+
+  0% {
+    opacity: 0;
+
+    clip-path: inset(
+      0 100% 0 0
+    );
+
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+
+    clip-path: inset(
+      0 0 0 0
+    );
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes pulseDot {
+
+  0%,
+  100% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 0 4px rgba(
+        20,
+        184,
+        166,
+        0.12
+      );
+  }
+
+  50% {
+    transform: scale(1.2);
+
+    box-shadow:
+      0 0 0 7px rgba(
+        20,
+        184,
+        166,
+        0.04
+      );
+  }
+}
+
+
+@keyframes imageGlow {
+
+  0%,
+  100% {
+    transform: scale(0.95);
+
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.08);
+
+    opacity: 1;
+  }
+}
+
+
+@keyframes gradientRotate {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes ringRotate {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes ringRotateReverse {
+
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+@keyframes floatingCard {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+
+@keyframes floatingCardReverse {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+
+@keyframes floatingSmall {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(4deg);
+  }
+}
+
+
+@keyframes scrollArrow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark-mode .hero-section {
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(37, 99, 235, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(20, 184, 166, 0.09),
+      transparent 25%
+    ),
+    #020617;
+
+  color: #f8fafc;
+}
+
+
+body.dark-mode .hero-grid {
+  opacity: 0.20;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    );
+}
+
+
+body.dark-mode .hero-title-small {
+  color: #94a3b8;
+}
+
+
+body.dark-mode .hero-role {
+  color: #cbd5e1;
+}
+
+
+body.dark-mode .hero-description {
+  color: #94a3b8;
+}
+
+
+body.dark-mode .hero-name {
+  background: linear-gradient(
+    100deg,
+    #f8fafc 0%,
+    #60a5fa 48%,
+    #2dd4bf 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+body.dark-mode .welcome-icon {
+  background: rgba(
+    37,
+    99,
+    235,
+    0.12
+  );
+}
+
+
+body.dark-mode .freelance-badge {
+  background: rgba(
+    20,
+    184,
+    166,
+    0.08
+  );
+
+  border-color: rgba(
+    20,
+    184,
+    166,
+    0.20
+  );
+
+  color: #5eead4;
+}
+
+
+body.dark-mode .hero-secondary-btn {
+  background: #0f172a;
+
+  border-color: #1e293b;
+
+  color: #cbd5e1;
+}
+
+
+body.dark-mode .hero-secondary-btn:hover {
+  background: #172033;
+
+  border-color: #334155;
+
+  color: #60a5fa;
+}
+
+
+body.dark-mode .hero-socials a {
+  background: #0f172a;
+
+  border-color: #1e293b;
+
+  color: #cbd5e1;
+}
+
+
+body.dark-mode .hero-socials a:hover {
+  background: #2563eb;
+
+  border-color: #2563eb;
+
+  color: #ffffff;
+}
+
+
+body.dark-mode .floating-freelance-card,
+body.dark-mode .floating-project-card {
+  background: rgba(
+    15,
+    23,
+    42,
+    0.88
+  );
+
+  border-color:
+    rgba(255, 255, 255, 0.08);
+}
+
+
+body.dark-mode .floating-freelance-card strong,
+body.dark-mode .floating-project-card strong {
+  color: #f8fafc;
+}
+
+
+body.dark-mode .floating-tech {
+  background: #0f172a;
+
+  border-color: #1e293b;
+
+  color: #60a5fa;
+}
+
+
+body.dark-mode .hero-profile-image {
+  border-color: #020617;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+  .hero-section {
+    padding-top: 120px;
+  }
+
+
+  .hero-row {
+    min-height: auto;
+  }
+
+
+  .hero-content {
+    max-width: 100%;
+
+    text-align: center;
+  }
+
+
+  .hero-welcome {
+    justify-content: center;
+  }
+
+
+  .hero-name {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .freelance-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+
+  .hero-social-area {
+    justify-content: center;
+  }
+
+
+  .hero-image-area {
+    height: 520px;
+
+    margin-top: 30px;
+  }
+
+
+  .hero-image-frame {
+    width: 310px;
+    height: 310px;
+  }
+
+
+  .hero-ring-one {
+    width: 380px;
+    height: 380px;
+  }
+
+
+  .hero-ring-two {
+    width: 430px;
+    height: 430px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+  .hero-section {
+    min-height: auto;
+
+    padding: 115px 0 70px;
+  }
+
+
+  .hero-title-small {
+    font-size: 1rem;
+  }
+
+
+  .hero-name {
+    font-size: clamp(
+      2.8rem,
+      13vw,
+      4rem
+    );
+  }
+
+
+  .hero-role {
+    font-size: 1.15rem;
+  }
+
+
+  .hero-description {
+    font-size: 0.91rem;
+
+    line-height: 1.7;
+  }
+
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    width: 100%;
+  }
+
+
+  .hero-social-area {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .hero-image-area {
+    height: 440px;
+
+    margin-top: 15px;
+  }
+
+
+  .hero-image-frame {
+    width: 255px;
+    height: 255px;
+
+    padding: 7px;
+  }
+
+
+  .hero-profile-image {
+    border-width: 5px;
+  }
+
+
+  .hero-ring-one {
+    width: 310px;
+    height: 310px;
+  }
+
+
+  .hero-ring-two {
+    width: 350px;
+    height: 350px;
+  }
+
+
+  .floating-freelance-card {
+    top: 50px;
+    right: 0;
+
+    transform: scale(0.85);
+  }
+
+
+  .floating-project-card {
+    bottom: 45px;
+    left: 0;
+
+    transform: scale(0.85);
+  }
+
+
+  .floating-tech {
+    display: none;
+  }
+
+
+  .hero-scroll {
+    display: none;
+  }
+
+}
+
+
+
+
+/* =========================================
+   ANIMATED ROLE
+========================================= */
+
+.hero-role-wrapper {
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 16px;
+}
+
+
+.hero-role-label {
+  color: #64748b;
+
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+.hero-role {
+  position: relative;
+
+  display: inline-block;
+
+  color: #2563eb;
+
+  font-size: clamp(
+    1.3rem,
+    2vw,
+    1.8rem
+  );
+
+  font-weight: 800;
+
+  letter-spacing: -0.035em;
+
+  white-space: nowrap;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #14b8a6,
+    #2563eb
+  );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    filter 0.35s ease;
+
+  animation: roleGradient 3s linear infinite;
+}
+
+
+/* Role entering */
+
+.hero-role.role-visible {
+  opacity: 1;
+
+  transform:
+    translateY(0)
+    scale(1);
+
+  filter: blur(0);
+}
+
+
+/* Role leaving */
+
+.hero-role.role-hidden {
+  opacity: 0;
+
+  transform:
+    translateY(-12px)
+    scale(0.96);
+
+  filter: blur(5px);
+}
+
+
+/* Gradient moving continuously */
+
+@keyframes roleGradient {
+
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}

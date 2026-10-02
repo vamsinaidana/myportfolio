@@ -1,0 +1,636 @@
+ /* =====================================================
+   NAVBAR
+===================================================== */
+
+.portfolio-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 78px;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(15, 23, 42, 0.07);
+
+  transition:
+    height 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =====================================================
+   BOOTSTRAP CONTAINER
+===================================================== */
+
+.portfolio-navbar .container {
+  height: 100%;
+}
+
+
+/* =====================================================
+   NAVBAR INNER
+===================================================== */
+
+.navbar-inner {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.portfolio-logo {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  margin: 0;
+  padding: 0;
+
+  color: #0f172a;
+
+  text-decoration: none;
+
+  font-size: 1.45rem;
+  font-weight: 800;
+
+  line-height: 1;
+  letter-spacing: -0.05em;
+
+  transition: transform 0.3s ease;
+}
+
+.portfolio-logo:hover {
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+
+.logo-name {
+  color: inherit;
+}
+
+
+.logo-bracket {
+  color: #3b82f6;
+
+  font-weight: 900;
+}
+
+
+.logo-dot {
+  color: #14b8a6;
+
+  font-weight: 900;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.portfolio-nav {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =====================================================
+   NAV LINKS
+===================================================== */
+
+.portfolio-nav a {
+  position: relative;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  color: #475569;
+
+  text-decoration: none;
+
+  font-size: 0.91rem;
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.portfolio-nav a:hover {
+  color: #2563eb;
+}
+
+
+/* =====================================================
+   NAV LINK UNDERLINE
+===================================================== */
+
+.portfolio-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 25px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #14b8a6
+  );
+
+  transition: width 0.3s ease;
+}
+
+
+.portfolio-nav a:hover::after {
+  width: 100%;
+}
+
+
+/* =====================================================
+   NAVBAR ACTIONS
+===================================================== */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   DARK MODE BUTTON
+===================================================== */
+
+.theme-toggle {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  border: 1px solid rgba(15, 23, 42, 0.10);
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.theme-toggle:hover {
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  border-color: rgba(37, 99, 235, 0.20);
+
+  transform: rotate(15deg);
+}
+
+
+/* =====================================================
+   HIRE ME BUTTON
+===================================================== */
+
+.nav-hire-btn {
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin: 0;
+  padding: 0 18px;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #14b8a6
+  );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.87rem;
+  font-weight: 700;
+
+  line-height: 1;
+
+  box-shadow:
+    0 8px 22px rgba(37, 99, 235, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.nav-hire-btn:hover {
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(37, 99, 235, 0.28);
+}
+
+
+.nav-hire-btn i {
+  font-size: 0.8rem;
+
+  transition: transform 0.3s ease;
+}
+
+
+.nav-hire-btn:hover i {
+  transform: translate(2px, -2px);
+}
+
+
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 43px;
+  height: 43px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  margin: 0;
+  padding: 0;
+
+  border: 1px solid rgba(15, 23, 42, 0.10);
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+}
+
+
+.mobile-menu-btn span {
+  width: 20px;
+  height: 2px;
+
+  display: block;
+
+  border-radius: 50px;
+
+  background: #0f172a;
+
+  transition: all 0.3s ease;
+}
+
+
+/* =====================================================
+   HAMBURGER ACTIVE
+===================================================== */
+
+.mobile-menu-btn.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+
+.mobile-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+
+.mobile-menu-btn.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+
+/* =====================================================
+   SCROLLED NAVBAR
+===================================================== */
+
+.portfolio-navbar.navbar-scrolled {
+  height: 70px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark-mode {
+  background: #020617;
+  color: #e2e8f0;
+}
+
+
+body.dark-mode .portfolio-navbar {
+  background: rgba(2, 6, 23, 0.88);
+
+  border-bottom-color:
+    rgba(255, 255, 255, 0.08);
+}
+
+
+body.dark-mode .portfolio-navbar.navbar-scrolled {
+  background: rgba(2, 6, 23, 0.97);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+body.dark-mode .portfolio-logo {
+  color: #f8fafc;
+}
+
+
+body.dark-mode .portfolio-logo:hover {
+  color: #f8fafc;
+}
+
+
+body.dark-mode .portfolio-nav a {
+  color: #cbd5e1;
+}
+
+
+body.dark-mode .portfolio-nav a:hover {
+  color: #60a5fa;
+}
+
+
+body.dark-mode .theme-toggle {
+  background: #0f172a;
+
+  border-color:
+    rgba(255, 255, 255, 0.10);
+
+  color: #facc15;
+}
+
+
+body.dark-mode .theme-toggle:hover {
+  background: #172033;
+
+  color: #fde047;
+}
+
+
+body.dark-mode .mobile-menu-btn {
+  background: #0f172a;
+
+  border-color:
+    rgba(255, 255, 255, 0.10);
+}
+
+
+body.dark-mode .mobile-menu-btn span {
+  background: #f8fafc;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .portfolio-nav {
+    gap: 21px;
+  }
+
+  .portfolio-nav a {
+    font-size: 0.85rem;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE / TABLET NAV
+===================================================== */
+
+@media (max-width: 991px) {
+
+  .portfolio-nav {
+    position: absolute;
+
+    top: 78px;
+
+    left: 15px;
+    right: 15px;
+
+    width: auto;
+    height: auto;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    justify-content: flex-start;
+
+    gap: 4px;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid rgba(15, 23, 42, 0.08);
+
+    border-radius: 18px;
+
+    box-shadow:
+      0 20px 50px rgba(15, 23, 42, 0.12);
+
+    animation: navbarDrop 0.25s ease;
+  }
+
+
+  .portfolio-nav.nav-open {
+    display: flex;
+  }
+
+
+  .portfolio-nav a {
+    width: 100%;
+    height: auto;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    line-height: 1.2;
+  }
+
+
+  .portfolio-nav a:hover {
+    background: #eff6ff;
+  }
+
+
+  .portfolio-nav a::after {
+    display: none;
+  }
+
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+
+  body.dark-mode .portfolio-nav {
+    background: #0f172a;
+
+    border-color:
+      rgba(255, 255, 255, 0.08);
+  }
+
+
+  body.dark-mode .portfolio-nav a:hover {
+    background: #1e293b;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+  .portfolio-navbar {
+    height: 70px;
+  }
+
+
+  .portfolio-navbar.navbar-scrolled {
+    height: 66px;
+  }
+
+
+  .portfolio-logo {
+    font-size: 1.20rem;
+  }
+
+
+  .nav-hire-btn {
+    display: none;
+  }
+
+
+  .theme-toggle,
+  .mobile-menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .portfolio-nav {
+    top: 70px;
+  }
+
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes navbarDrop {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
